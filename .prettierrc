@@ -1,0 +1,6 @@
+{
+  "arrowParens": "always",
+  "trailingComma": "none",
+  "bracketSameLine": false,
+  "bracketSpacing": true
+}
