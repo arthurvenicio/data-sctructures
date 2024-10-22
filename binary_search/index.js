@@ -3,9 +3,10 @@
  * @param {number} target
  * @return {number}
  */
-var search = function (nums, target) {
-  let left = 0;
-  let rigth = nums.length;
+var search = function (nums, target, left = 0, rigth = null) {
+  if (rigth == null) {
+    rigth = nums.length;
+  }
 
   while (left < rigth) {
     let mid = parseInt((left + rigth) / 2);
@@ -24,4 +25,4 @@ var search = function (nums, target) {
   return -1;
 };
 
-console.log(search([-1, 0, 3, 5, 9, 12], 9));
+module.exports = search;
