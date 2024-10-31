@@ -9,7 +9,8 @@ class Solution:
                 freq_map[num] = idx
 
         return False
-        
+
+# here we use dictonary (hashmap)   
         
 # another solution
 
@@ -18,3 +19,5 @@ class Solution:
         nums_set  = set(nums)
         
         return True if len(nums_set) < len(nums) else False
+    
+# here we use set (hashmap)  

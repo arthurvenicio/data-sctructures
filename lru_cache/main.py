@@ -39,3 +39,6 @@ lRUCache.put(4, 4); # LRU key was 1, evicts key 1, cache is {4=4, 3=3}
 print(lRUCache.get(1));    # return -1 (not found)
 print(lRUCache.get(3));    # return 3
 print(lRUCache.get(4));    # return 4
+
+
+# here we use dictonary (hashmap)  
