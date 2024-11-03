@@ -35,7 +35,7 @@ class Solution:
             return 0
      
         buy_price = prices[0] # starting with the first price
-        profit = 0
+        max_profit = 0
         
         for price in prices[1:]: # slince the list, after the first position
             if buy_price > price:
@@ -43,16 +43,10 @@ class Solution:
                 
                 
             curr_profit = price - buy_price
-            if profit < curr_profit:
-                profit = curr_profit
+            if max_profit < curr_profit:
+                max_profit = curr_profit
             
-        return profit
-    
-
-
+        return max_profit
     
 sol = Solution()
 print(sol.maxProfit([7,1,5,3,6,4]))
-print(sol.maxProfit([7,6,4,3,1]))
-print(sol.maxProfit([2,4,1]))
-print(sol.maxProfit([2,1,2,0,1]))
