@@ -15,8 +15,8 @@ class Solution:
         if not node:
             return [True,0] # if node is null, already is balanced
         
-        left = self.dfs(node.left) # verify is the left side of the node is balanced
-        right = self.dfs(node.right)  # verify is the right side of the node is balanced
+        left = self.deep_first_search(node.left) # verify is the left side of the node is balanced
+        right = self.deep_first_search(node.right)  # verify is the right side of the node is balanced
         
         is_balance = (left[0] and right[0] and abs(left[1] - right[1]) <= 1) == 1
         
