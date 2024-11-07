@@ -29,7 +29,10 @@ class Solution:
         
         return results
     
-    
+
+# time complexity: O(n²)
+# space complexity: O(n): in python when we use .sort this takes O(n)
+
 sol = Solution()
 
 print(sol.threeSum([-1,0,1,2,-1,-4]))
