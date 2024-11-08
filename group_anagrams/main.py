@@ -1,23 +1,40 @@
 from typing import List
 
 
+# class Solution:
+#     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+#         result = []
+#         strs_map = {}
+        
+#         for s in strs:
+#             string_sorted = ''.join(sorted(s))
+#             if string_sorted  not in strs_map: 
+#                 strs_map[string_sorted] = [s]
+#             else:
+#                 strs_map[string_sorted].append(s)
+        
+        
+#         for key in strs_map.items():
+#             result.append(key[1])
+        
+#         return result
+
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        result = []
-        strs_map = {}
+        anagrams_map= {}
         
-        for s in strs:
-            string_sorted = ''.join(sorted(s))
-            if string_sorted  not in strs_map: 
-                strs_map[string_sorted] = [s]
+        for string in strs:
+            sorted_string = ''.join(sorted(string))
+            
+            if sorted_string not in anagrams_map: 
+                anagrams_map[sorted_string] = [string]
             else:
-                strs_map[string_sorted].append(s)
+                anagrams_map[sorted_string].append(string)
+       
+
+        return list(anagrams_map.values())
         
-        
-        for key in strs_map.items():
-            result.append(key[1])
-        
-        return result
         
     
 sol = Solution()
