@@ -13,14 +13,16 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         char_map = {}
         
+        main_string = s if len(s) > len(t) else t
+        second_string = t if len(s) < len(t) else s
         
-        for c in s:
+        for c in main_string:
             if c in char_map:
                 char_map[c] += 1
             else:
                 char_map[c] = 1
             
-        for c in t:
+        for c in second_string:
             if c in char_map:
                 char_map[c] -= 1
             
@@ -32,4 +34,4 @@ class Solution:
         
         
 sol = Solution()
-print(sol.isAnagram("anagram", "nagara"))
+print(sol.isAnagram("a", "b"))
