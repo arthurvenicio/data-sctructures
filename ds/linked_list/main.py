@@ -35,11 +35,6 @@ class LinkedList:
         
         self.head = self.head.next
         
-        if self.head:
-            self.head.prev = None
-        else:
-            self.tail = None
-            
         return curr_value
     
     def popFromEnd(self):
@@ -47,8 +42,6 @@ class LinkedList:
              return None
          
         curr_value = self.tail.value
-        
-        self.tail = self.tail.prev
         
         if self.tail:
             self.tail.next = None
