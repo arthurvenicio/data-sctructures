@@ -35,6 +35,7 @@ class Solution:
         
 # Worst case, time complexy is O(n log n)
 # Think in a recursive way
+# Divide and conquer
 
 sol = Solution()
 print(sol.merge_sort([2,8,6,3,7,9]))
