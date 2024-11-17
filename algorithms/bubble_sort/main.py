@@ -14,6 +14,12 @@ def bubble(nums):
     return nums
 
 
-arr = [1,2,5,4,3]
-arrS = bubble(arr)
+# arr = [1,2,5,4,3]
+# arrS = bubble(arr)
 # print(arrS)
+
+# we must compare consecutive items, and validate if it is in the correct place ex: arr[left] < arr[right]. The higher value, is bubble to most right possible
+
+# The worst case time complexy is : O(n²)
+
+# divide and conquer
