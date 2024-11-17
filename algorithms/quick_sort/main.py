@@ -11,3 +11,6 @@ def quicksort(arr):
 # Exemplo de uso
 arr = [3, 6, 8, 10, 1, 2, 1]
 print(quicksort(arr))  # Saída: [1, 1, 2, 3, 6, 8, 10]
+
+
+# Worst case is time complexy O(n²), and average case O(n log n)
