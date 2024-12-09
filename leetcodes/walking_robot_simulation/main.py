@@ -16,7 +16,7 @@ class Solution:
         
         for c in commands:  # Process each command
             if c == -1:  # Turn right (increment direction index clockwise)
-                d = (d + 1) % 4
+                d = (d + 1) % 4 # module by four, the length of array of direct, evict out of bounds
             elif c == -2:  # Turn left (decrement direction index counterclockwise)
                 d = (d - 1) % 4
             else:  # Move forward
@@ -28,7 +28,7 @@ class Solution:
                     x, y = x + dx, y + dy  # Update the position
                     
             # Update the maximum squared Euclidean distance
-            res = max(res, x**2 + y**2)
+            res = max(res, x**2 + y**2) # square of x and square of y
         
         return res  # Return the maximum distance
 
