@@ -6,7 +6,8 @@ class Node:
         self.val = val
         self.neighborhood = neighborhood
 
-    
+
+    # dfs uses stack to keep track of nodes
     def dfs(self, node):
         set = Set()
         
@@ -18,7 +19,11 @@ class Node:
                 if neighbor.val not in set:
                     dfs_recursive(neighbor)
         return False
-       
+    
+    # bfs uses queue to keep track of nodes
+    def bfs(self, val):
+        vistited_set = Set()
+        return False 
         
         
 root = Node(0)
