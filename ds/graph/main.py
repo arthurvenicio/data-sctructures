@@ -8,6 +8,8 @@ class Node:
 
 
     # dfs uses stack to keep track of nodes
+    # time complexy: O(v + e)
+    # space complexy: O(v + e)
     def dfs(self, node):
         set = Set()
         
@@ -21,6 +23,8 @@ class Node:
         return False
     
     # bfs uses queue to keep track of nodes
+    # time complexy: O(v + e)
+    # space complexy: O(v + e)
     def bfs(self, val):
         vistited_set = Set()
         return False 
