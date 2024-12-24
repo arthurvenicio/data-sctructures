@@ -16,3 +16,6 @@ class Solution:
         res.reverse()
                 
         return res
+    
+# Time complexity : O(n)
+# Space complexity: O(1)
