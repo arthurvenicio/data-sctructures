@@ -24,3 +24,5 @@ class Solution:
 
         return False
         
+# Time complexity: O(log (m * n))
+# Space complexity: O(1)
