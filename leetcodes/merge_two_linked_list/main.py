@@ -1,37 +1,26 @@
 # Definition for singly-linked list.
-from typing import Optional
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-       if not list1:
-           return list2
-       if not list2:
-           return list1
-       
-       
-       if list1.val <= list2.val:
-           list1.next = self.mergeTwoLists(list1.next, list2)
-           return list1
-       else:
-           list2.next = self.mergeTwoLists(list2.next, list1)
-           return list2
-        
-        
-sol = Solution()
+        dummy = ListNode()
+        curr = dummy
 
+        while list1 and list2:
+            if list1.val < list2.val:
+                curr.next = list1
+                curr = list1
+                list1 = list1.next
+            else:
+                curr.next = list2
+                curr = list2
+                list2 = list2.next
 
-nodeA3 = ListNode(4)
-nodeA2 = ListNode(2, nodeA3)
-headA1 = ListNode(1, nodeA2)
+        curr.next = list1 if list1 else list2
 
+        return dummy.next
 
-nodeB3 = ListNode(4)
-nodeB2 = ListNode(3, nodeA3)
-headB1 = ListNode(1, nodeA2)
-
-print(sol.mergeTwoLists(headA1, headB1))
+# Time complexity: O(n)
+# Space Complexity: O(1)
