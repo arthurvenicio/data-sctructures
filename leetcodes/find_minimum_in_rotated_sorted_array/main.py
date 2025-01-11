@@ -13,5 +13,3 @@ class Solution:
                 r = m
 
         return nums[l]
-
-        
