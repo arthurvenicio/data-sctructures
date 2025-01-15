@@ -13,8 +13,8 @@ class Solution:
           else:
             grid[r][c] = '0'
             dfs(r, c+1) # right
-            dfs(r+1, c) # left
-            dfs(r,c-1) # down
+            dfs(r+1, c) # down
+            dfs(r,c-1) # left
             dfs(r-1,c) # up
          
         for r in range(rows):
@@ -34,5 +34,6 @@ print(obj.numIslands([
   ["0","0","1","0","0"]
 ]))
 
-# Method used : BFS
-# Time complexy: O(r * c)
+# Method used : we use the dfs to mark the area of the island with water "0"
+# Time complexity: O(r * c)
+# Space complexity: O(r * c)
